@@ -1,0 +1,47 @@
+@font-face {
+    font-family: 'JetBrains Mono';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+        url('../fonts/jetbrains-mono-v12-latin_cyrillic-regular.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('../fonts/jetbrains-mono-v12-latin_cyrillic-regular.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+:root {
+    
+}
+
+* {
+    box-sizing: border-box;
+    
+}
+
+body {
+    background-color: ;
+    font-family: "JetBrains Mono", monospace;
+}
+
+
+
+.header {
+    /* Block setting */
+    max-width: 1240px;
+    margin: 0 auto;
+    
+    /* Flex settings */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.header__nav-list {
+    display: flex;
+    list-style-type: none;
+}
+
+.header__nav-list-item {
+    margin-right: 1rem;
+}
