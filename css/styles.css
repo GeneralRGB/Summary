@@ -31,8 +31,10 @@
     /* Sizes */
     --content-max-width: 1024px;
     --heading-font-size: 36px;
-    --big-paragraph-text-size: 20px;
+    --big-paragraph-text-size: 18px;
     --paragraph-text-size: 14px;
+    --my-photo-height: 250px;
+    --section-side-padding: 70px;
 }
 
 ::selection {
@@ -74,7 +76,7 @@ body {
     /* Sizing */
     max-width: var(--content-max-width);
     margin: 0 auto;
-    padding: 50px 80px 10px 50px;
+    padding: 50px var(--section-side-padding) 10px var(--section-side-padding);
 
     /* Style */
     background-color: var(--content-bg-color);
@@ -141,15 +143,18 @@ body {
 .header__nav-list {
     display: flex;
     list-style-type: none;
+    padding: 0;
 }
 
 .header__nav-list-item {
+    font-size: var(--big-paragraph-text-size);
     margin-right: 2rem;
 }
 
 
 /* About me */
-.about-me {
+
+.about-me__div {
     display: flex;
     column-gap: 5%;
 }
@@ -163,7 +168,7 @@ body {
 }
 
 .about-me__photo {
-    flex: 0 0 30%;
+    height: var(--my-photo-height);
     align-self: center;
     text-align: center;
     border-radius: 50%;
@@ -183,6 +188,7 @@ body {
     align-self: flex-start;
     vertical-align: top;
     transform: translateY(2px);
+    font-size: var(--big-paragraph-text-size);
 }
 
 .experience__date.small {
@@ -234,6 +240,7 @@ body {
 
 .experience__text {
     margin: 0 0 25px;
+    font-size: var(--big-paragraph-text-size);
 }
 
 .experience__list {
@@ -242,7 +249,8 @@ body {
 }
 
 .experience__list-item {
-    transform: translateY(-3px);
+    font-size: var(--paragraph-text-size);
+    transform: translateY(-1px);
 }
 
 .experience__sublist {
@@ -315,10 +323,14 @@ body {
 
 .contacts__list {
     list-style-type: none;
-
+    padding: 0;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+}
+
+.contacts__social-logo {
+    height: 40px;
 }
 
 .contacts__text {
@@ -332,4 +344,90 @@ body {
 
 .contacts__text>.link:hover {
     text-decoration: underline;
+}
+
+
+
+@media only screen and (max-width: 890px) {
+    :root {
+        --heading-font-size: 27px;
+        --big-paragraph-text-size: 17px;
+        --paragraph-text-size: 13px;
+        --my-photo-height: 150px;
+        --section-side-padding: 35px;
+    }
+}
+
+
+@media only screen and (max-width: 820px) {
+    .contacts__list-item {
+        display: flex;
+        flex-direction: column;
+        gap: 20px 20px;
+    }
+
+    .header__nav-list-item {
+        margin-right: 1rem;
+    }
+
+    .projects {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    :root {
+        --heading-font-size: 26px;
+        --big-paragraph-text-size: 15px;
+        --paragraph-text-size: 12px;
+    }
+
+    .contacts__list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 25px;
+    }
+
+    .contacts__social-logo {
+        height: 60px;
+    }
+
+    .header__nav-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+
+    .about-me__div {
+        flex-direction: column-reverse;
+        row-gap: 25px;
+    }
+}
+
+@media only screen and (max-width: 460px) {
+    .header__nav-list {
+        display: flex;
+        flex-direction: column;
+        row-gap: 5px;
+        margin: 5px 10px 5px;
+
+    }
+
+    .experience__list-item {
+        transform: translateY(0px);
+    }
+}
+
+@media only screen and (max-width: 430px) {
+    :root {
+        --heading-font-size: 24px;
+        --big-paragraph-text-size: 14px;
+        --paragraph-text-size: 10px;
+        --section-side-padding: 15px;
+    }
+
+    .experience__date {
+        flex: 0 0 70px;
+    }
 }
