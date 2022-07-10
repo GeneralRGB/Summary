@@ -415,7 +415,7 @@ body {
     }
 
     .experience__list-item {
-        transform: translateY(0px);
+        transform: translateY(1px);
     }
 }
 
