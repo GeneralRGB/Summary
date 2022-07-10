@@ -34,6 +34,8 @@
     --big-paragraph-text-size: 18px;
     --paragraph-text-size: 14px;
     --my-photo-height: 250px;
+    /* Margins and paddings */
+    --content-top-padding: 50px;
     --section-side-padding: 70px;
 }
 
@@ -76,7 +78,7 @@ body {
     /* Sizing */
     max-width: var(--content-max-width);
     margin: 0 auto;
-    padding: 50px var(--section-side-padding) 10px var(--section-side-padding);
+    padding: var(--content-top-padding) var(--section-side-padding) 10px var(--section-side-padding);
 
     /* Style */
     background-color: var(--content-bg-color);
@@ -380,6 +382,8 @@ body {
         --heading-font-size: 26px;
         --big-paragraph-text-size: 15px;
         --paragraph-text-size: 12px;
+        --content-top-padding: 25px;
+        --section-side-padding: 20px;
     }
 
     .contacts__list {
@@ -421,10 +425,10 @@ body {
 
 @media only screen and (max-width: 430px) {
     :root {
-        --heading-font-size: 24px;
-        --big-paragraph-text-size: 14px;
-        --paragraph-text-size: 10px;
-        --section-side-padding: 15px;
+        --heading-font-size: 26px;
+        --big-paragraph-text-size: 16px;
+        --paragraph-text-size: 13px;
+        --section-side-padding: 10px;
     }
 
     .experience__date {
