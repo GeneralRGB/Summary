@@ -43,9 +43,19 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: "JetBrains Mono", monospace;
     background-color: var(--bg-color);
+    overflow-anchor: none;
+}
+
+.anchor {
+    position: absolute;
+    transform: translateY(-100px);
 }
 
 .link {
@@ -308,7 +318,7 @@ body {
 
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
 }
 
 .contacts__text {
