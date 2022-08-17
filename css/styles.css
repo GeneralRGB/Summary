@@ -171,7 +171,7 @@ body {
 
 .about-me__photo {
     height: var(--my-photo-height);
-    align-self: center;
+    align-self: flex-start;
     text-align: center;
     border-radius: 50%;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
@@ -355,7 +355,7 @@ body {
         --heading-font-size: 27px;
         --big-paragraph-text-size: 17px;
         --paragraph-text-size: 13px;
-        --my-photo-height: 150px;
+        --my-photo-height: 200px;
         --section-side-padding: 35px;
     }
 }
@@ -383,7 +383,12 @@ body {
         --big-paragraph-text-size: 15px;
         --paragraph-text-size: 12px;
         --content-top-padding: 25px;
+        --my-photo-height: 150px;
         --section-side-padding: 20px;
+    }
+
+    .about-me__photo {
+        align-self: center;
     }
 
     .contacts__list {
