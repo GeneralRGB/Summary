@@ -29,6 +29,22 @@ module.exports = {
 					'sass-loader',
 				],
 			},
+			{
+				test: /\.(jpg|png|svg|gif)$/,
+				type: 'asset/resource',
+			},
+			{
+				test: /\.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
+				use: [
+					{
+						loader: 'url-loader',
+						options: {
+							name: '[base64].[ext]',
+							outputPath: 'media/',
+						},
+					},
+				],
+			},
 		],
 	},
 	resolve: {

@@ -1,6 +1,16 @@
 import React from 'react';
-import styles from './styles.module.scss';
 
-const App: React.FC = () => <div className={styles.white}>Testing!</div>;
+import Header from './components/Header';
+import Main from './components/Main';
+
+import './assets/normalize.scss';
+import './styles.scss';
+
+const App: React.FC = () => (
+	<>
+		<Header />
+		<Main />
+	</>
+);
 
 export default App;
